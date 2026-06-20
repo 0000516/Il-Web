@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il Web</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #F5F5F7;
+}
+
+/* HEADER */
+header {
+    background-color: #C7D3C0;
+    color: white;
+    padding: 10px;
+    position: relative;
+}
+
+/* titolo + logo */
+.titolo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+/* bottone */
+.menu-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 25px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* MENU */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: rgba(245,245,247,0.95);
+    text-align: center;
+    transition: height 0.3s ease;
+    z-index: 1000;
+}
+
+nav.active {
+    height: 100vh;
+}
+
+nav a {
+    display: block;
+    margin: 20px 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000000;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* CONTENUTO */
+main {
+    padding: 30px 15px;
+}
+
+main .testo {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    text-align: justify;
+    line-height: 1.6;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* TIMELINE */
+.timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 50px auto;
+    padding-left: 40px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #C7D3C0;
+}
+
+.item {
+    margin: 40px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.item span {
+    background: #C7D3C0;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.item span:hover {
+    transform: scale(1.1);
+}
+
+/* POPUP */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    animation: fade 0.3s ease;
+}
+
+.box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    transform: scale(0.8);
+    animation: pop 0.3s ease forwards;
+}
+
+.close {
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes pop {
+    from {transform: scale(0.8); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="titolo">
+        <img src="ChatGPT Image 21 apr 2026, 12_21_10.png" class="logo">
+        <h1>Il Web</h1>
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+<nav id="menu">
+    <a href="Home.html">Home</a>
+    <a href="pagina1.html">HTML e CSS</a>
+    <a href="pagina2.html">Il Web </a>
+</nav>
+
+<main>
+    <div class="testo">
+        <p>
+             Questo sito racconta la nascita e l'evoluzione del World Wide Web, una delle invenzioni che ha 
+             cambiato maggiormente il mondo moderno. Attraverso una linea del tempo verranno presentate le tappe 
+             fondamentali dello sviluppo del Web: dalle prime reti informatiche fino alle tecnologie più recenti, come l'intelligenza artificiale.
+
+L'obiettivo del progetto è mostrare come Internet e il Web abbiano trasformato il modo di comunicare, studiare,
+ lavorare e condividere informazioni. Il sito è stato realizzato utilizzando i linguaggi HTML e CSS, applicando competenze pratiche di progettazione e sviluppo web.
+        </p>
+    </div>
+
+    <h1 style="text-align:center;">Timeline del Web</h1>
+
+    <div class="timeline">
+
+      <div class="item" onclick="openModal('m1940')">
+        <span>1969</span>
+      </div>
+
+      <div class="item" onclick="openModal('m1975')">
+        <span>1989</span>
+      </div>
+
+      <div class="item" onclick="openModal('m1981')">
+        <span>1991</span>
+      </div>
+
+      <div class="item" onclick="openModal('m1990')">
+        <span>1998</span>
+      </div>
+
+      <div class="item" onclick="openModal('m2007')">
+        <span>2022</span>
+      </div>
+
+    </div>
+</main>
+
+<!-- POPUP -->
+<div id="m1940" class="modal">
+  <div class="box">
+    <span class="close" onclick="closeModal(this)">×</span>
+    <h2>1969</h2>
+    <p>Nascono le prime reti di computer</p>
+    <img src="1969.png" alt="1969" width="100%">
+  </div>
+</div>
+
+<div id="m1975" class="modal">
+  <div class="box">
+    <span class="close" onclick="closeModal(this)">×</span>
+    <h2>1989</h2>
+    <p>Tim Berners-Lee presenta il progetto del World Wide Web al CERN.</p>
+ 
+    <img src="1989.jpg" alt="1975" width="100%">
+  </div>
+</div>
+
+<div id="m1981" class="modal">
+  <div class="box">
+    <span class="close" onclick="closeModal(this)">×</span>
+    <h2>1991</h2>
+    <p>Viene publicato il primo sito della storia</p>
+    <img src="1991.png" alt="1981" width="100%">
+  </div>
+</div>
+
+<div id="m1990" class="modal">
+  <div class="box">
+    <span class="close" onclick="closeModal(this)">×</span>
+    <h2>1998</h2>
+    <p>nasce google la rivoluzione di cercare informazioni online</p>
+    <img src="1998.png" alt="1990" width="100%">
+  </div>
+</div>
+
+<div id="m2007" class="modal">
+  <div class="box">
+    <span class="close" onclick="closeModal(this)">×</span>
+    <h2>2022</h2>
+    <p>intelienza artificiale che si diffonde sempre più nel web</p>
+    <img src="2022.jpg" alt="2007" width="100%">
+  </div>
+</div>
+
+<footer>
+    <p>© A.s. 25/26 - Gabriele Dettori 3A</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+
+function openModal(id){
+    document.getElementById(id).style.display = "flex";
+}
+
+function closeModal(el){
+    el.parentElement.parentElement.style.display = "none";
+}
+</script>
+
+</body>
+</html>

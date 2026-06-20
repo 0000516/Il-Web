@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il Web</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #F5F5F7;
+}
+
+/* HEADER */
+header {
+    background-color: #C7D3C0;
+    color: white;
+    padding: 10px;
+    position: relative;
+}
+
+/* titolo + logo */
+.titolo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+/* bottone */
+.menu-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 25px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* MENU OVERLAY */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+
+    background-color: rgba(245,245,247,0.95);
+    text-align: center;
+
+    transition: height 0.3s ease;
+    z-index: 1000;
+}
+
+nav.active {
+    height: 100vh;
+}
+
+nav a {
+    display: block;
+    margin: 20px 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: 40px;
+}
+.testo {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 700px;
+    margin: 25px auto 10px auto;
+    line-height: 1.6;
+}
+
+.box-linguaggio {
+    width: 350px;
+    padding: 20px;
+    text-align: justify;
+    line-height: 1.6;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.intro{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.contenitore {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding: 10px 20px;
+}
+.intro{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+/* pulsanti lingua */
+.lingue {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.lingue a {
+    text-decoration: none;
+    background-color: white;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.lingue a:hover {
+    background-color: #e0e0e0;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="lingue">
+    <a href="pagina2.html">IT</a>
+    <a href="english.html">EN</a>
+    </div>
+    <div class="titolo">
+        <img src="ChatGPT Image 21 apr 2026, 12_21_10.png" class="logo">
+        <h1>Il Web</h1>
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+<nav id="menu">
+    <a href="Home.html">Home</a>
+    <a href="pagina1.html">HTML e CSS</a>
+    <a href="pagina2.html">Il Web</a>
+</nav>
+
+<main>
+    <div class="testo">
+    <h1 style="font-weight: 300;">Il Web</h1>        
+      <p style="font-family: Arial;"> È un sistema che permette di accedere a pagine e contenuti online tramite un browser. Spesso viene confuso con Internet, ma non sono la stessa cosa: Internet è la rete mondiale che collega computer e dispositivi, mentre il Web è uno dei servizi che utilizza questa rete per mostrare siti e pagine. Il Web è molto importante perché consente di condividere informazioni e comunicare rapidamente con persone di tutto il mondo. Viene utilizzato ogni giorno per navigare sui social network, cercare informazioni, studiare, fare acquisti online, guardare video, ascoltare musica e molto altro. Oggi il Web ha trasformato anche il mondo del lavoro: molte professioni, come il coding e lo sviluppo di software, si svolgono grazie a strumenti online. Inoltre, tecnologie come l’intelligenza artificiale e i servizi di streaming per video e musica sono diventate parte della vita quotidiana, offrendo nuove opportunità di lavoro e cambiando il modo in cui le persone comunicano, lavorano e si divertono.</p>
+    </div>
+</main>
+ <h1 style="font-weight: 200; text-align: center;">Conclusioni</h1>   
+<main>
+    
+    <div class="contenitore">
+        
+        <div class="box-linguaggio">
+            <h2></h2>
+            <p>
+                Il mondo continua a evolversi grazie alle nuove tecnologie, che ogni giorno introducono innovazioni capaci di migliorare la vita delle persone. Computer sempre più potenti, intelligenza artificiale, internet veloce e dispositivi smart stanno cambiando il modo in cui comunichiamo, studiamo e lavoriamo. Le tecnologie moderne permettono di accedere alle informazioni in pochi secondi e di svolgere attività che un tempo erano molto più lente e complesse. Anche il lavoro sta cambiando: nascono nuove professioni legate al digitale e molte attività vengono automatizzate. Questa continua evoluzione rende il futuro sempre più connesso, efficiente e ricco di opportunità.
+
+            </p>
+        </div>
+        
+        <div class="box-linguaggio">
+            <h2></h2>
+            <p>
+                 Il Web ha trasformato profondamente il modo di comunicare e di accedere alle informazioni. Oggi, grazie a Internet, è possibile parlare in tempo reale con persone che si trovano dall’altra parte del mondo e trovare qualsiasi tipo di informazione in pochi secondi. Prima era necessario consultare libri o enciclopedie, mentre ora basta un dispositivo collegato alla rete per ottenere risposte immediate. Il Web ha reso la comunicazione più veloce, semplice e globale, cambiando anche il modo in cui studiamo, lavoriamo e ci informiamo ogni giorno.
+
+            </p>
+        </div>
+        
+    </div>
+    
+</main>
+
+<footer>
+    <p>© A.s. 25/26 - Gabriele Dettori 3A</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
